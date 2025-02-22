@@ -1,0 +1,101 @@
+body {
+    font-family: "Plus Jakarta Sans", serif;
+    font-optical-sizing: auto;
+    font-style: normal; 
+  }
+
+#mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 8vw;
+  }
+  #navbar-icon {
+    background-color: transparent;
+    width: 2.25rem;
+    height: 1rem;
+    border-top: 0.2rem solid white;
+    border-bottom: 0.2rem solid white;
+    margin: 1.3rem 0;
+    color: #1b1b1b;
+  }
+  #dropdown-nav {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 15vw;
+    display: none;
+    background-color: #11003D;
+    z-index: 999;
+  }
+  .custom-hr {
+    border: none;
+    border-top: 1px solid #FFFFFF66;
+  }
+  
+  @keyframes slide-in {
+    from {
+      top: -100vh;
+    }
+    to {
+      top: 0;
+    }
+  }
+  @keyframes slide-out {
+    from {
+      top: 0;
+    }
+    to {
+      top: -100vh;
+    }
+  }
+  .clicked {
+    display: block !important;
+    animation: slide-in 0.5s forwards;
+  }
+  .original {
+    animation: slide-out 0.5s forwards;
+  }
+  #dropdown-nav img {
+    margin-left: 70vw;
+    margin-top: 5rem;
+    text-align: right;
+  }
+  #dropdown-nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  #dropdown-nav ul br{
+    border-top: 2px solid white;
+  }
+  #tablet-nav {
+    display: none;
+  }
+  @keyframes slider {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .logo-slider{
+    animation: 20s slider infinite linear;
+  }
+  .logo-slider img {
+    max-width: unset;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    #mobile-nav {
+      display: none;
+    }
+    #tablet-nav {
+      display: flex;
+      
+    }
+
+  
+  }  
